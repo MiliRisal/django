@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<!-- Hero Section end -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="hs-text">
+						<h2>Do you dream to become an Entrepreneur?</h2>
+						<p>We help to make your entrepreneurial dreams a reality. Our focus is helping you start & grow your business, work more productively, communicate your message more effectively, so you can succeed in your business and your life.</p>
+						<a href="../aboutus" class="site-btn">Find out more</a>
+					</div>
+				</div>
+
+				<div class="col-lg-5">
+				</div>
+			</div>
+		</div>
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/a.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/b.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/c.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/d.jpg' %}"></div>
+			<div class="hs-item set-bg" data-setbg="{% static 'img/hero-slider/e.jpg' %}"></div>
+		</div>
+	</section>
+	<!-- Hero Section end -->
+
+	<!-- Why Section end -->
+	<section class="why-section spad">
+		<div class="container">
+			<div class="text-center mb-5 pb-4">
+				<h2>Why Choose us?</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-012-24-hours"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Our services</h5>
+							<p>We provide you experts to help you with ideas, mentors to guide you and shareholders who participate in the management of your company.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-036-customer-service"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Expert advice!</h5>
+							<p>We plan special meetup program with sucessful business typcoons, where they share their experience, hardship and sucess stories with you.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-039-info"></i>
+						</div>
+						<div class="ib-text">
+							<h5>Creative ideas!</h5>
+							<p>If you have creative ideas, then you already got one of the essential traits of a successful entrepreneur. StartUP helps you with ideas which are benificial for your business.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center pt-3">
+				<!--<a href="#" class="site-btn sb-big">Login Now!</a>-->
+
+
+				<a href="../user/register" class="site-btn sb-sm-6">
+					<button type="button" class="btn btn" data-toggle="modal" data-target="#RegForm">
+						REGISTER NOW !!!
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- Why Section end -->
+
+
+	<!-- CTA Section end -->
+	<section class="cta-section set-bg" data-setbg="{% static 'img/cta-bg.jpg' %}">
+		<div class="container">
+			<h2>Are you looking for <strong>Shareholders</strong> who can invest?</h2>
+			<h5>If you're willing, then we provide shareholders and loan for your business.</h5>
+			<a href="../loans" class="site-btn sb-dark sb-big">Find out More</a>
+		</div>
+	</section>
+	<!-- CTA Section end -->
+
+
+	<!-- Feature Section -->
+	<section class="feature-section spad">
+		<div class="container">
+			<div class="feature-item">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="{% static 'img/feature-1.jpg' %}" alt="">
+					</div>
+					<div class="col-lg-6">
+						<div class="feature-text">
+							<h2>Start<strong>UP</strong> Entrepreneur's Network</h2>
+							<p>Welcome to the Entrepreneur’s Network. It is the global community for entrepreneurs at every stage. Startup, innovate, connect, share
+								knowledge and grow your business. We are always here to help and inspire you.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="feature-item">
+				<div class="row">
+					<div class="col-lg-6 order-lg-2">
+						<img src="{% static 'img/feature-2.jpg' %}" alt="">
+					</div>
+					<div class="col-lg-6 order-lg-1">
+						<div class="feature-text">
+							<h2>Making Meaningful Connections</h2>
+							<p>StartUP is the organization for innovative and aspiring entrepreneurs to meet one another and grow together. We are offering wide range of valuables services which includes Advisory Group meetings, Articles, Mentorships and much more. Let's changethe world together. Join hands to make the world a better place.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Feature Section end -->
+
+<!-- Score Section -->
+	<section class="score-section text-white set-bg" data-setbg="{% static 'img/score-bg.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-8">
+					<h2>Help us know your initiative better!</h2>
+					<a href="/contactus" class="site-btn sb-big">Go to Contact</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- Score Section end -->
+
+
+{% endblock %}

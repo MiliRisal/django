@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-section" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <form method="post" class="hero-form">
+                    {% csrf_token %}
+                   <lable style="color:white;font-size:30px;padding:100px;">Welcome to Loan Application</lable>
+                    <input type="text" name="contact" placeholder="Please Enter Your Contact number" required/>
+                    <input type="number" name="zipCode" placeholder="Please Enter Your Zip" required/>
+                    <input type="text" name="amount" placeholder="Please Enter total amount you want" required/>
+
+                    <input type="email" name="email" placeholder="Please Enter Email" required/>
+
+
+                        <select class="custom-select" name="businessType" id="validationCustom04" required>
+                            <option selected disabled value="">Business Type</option>
+                            <option>Sole</option>
+                            <option>Joint</option>
+                        </select>
+
+                    <div class="dp">
+                        <select class="custom-select" name="LoanType" id="validationCustom04" required>
+                            <option selected disabled value="">Are you looking for?</option>
+                            <option>Shareholders</option>
+                            <option>Loans</option>
+                        </select>
+                    </div>
+
+                    <style>
+						.dp{
+							padding-top:25px;
+						}
+					 </style>
+                    <div style="margin-top:10px;">
+
+                         <input type="submit" value="Apply" class="site-btn" >Apply</input>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</section>
+<style>
+		.hero-section {
+		background-color:#2f3640;
+		}
+	</style>
+{% endblock %}

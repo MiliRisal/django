@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--login section-->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <form method="post" class="hero-form">
+                    {% csrf_token %}
+                    <labble style="color:white;font-size:30px;padding:50px;">Welcome to Login-Form</labble>
+                    <input type="text" name="un" placeholder="Please Enter Your Username" required/>
+                    <input type="password" name="pw" placeholder="Please Enter Your Password" required/>
+                    <p>Please fill up this form for login !! </br>
+                        You can only login if you have registered StartUP Account!!</p>
+                    <button class="site-btn">Log-in</button>
+                    <a href="../user/register" class="active">SignUp</a>
+
+                    <!-- <script>
+                     var password = document.getElementById("password") , confirm_password = document.getElementById("re_password");
+
+                        function validatePassword(){
+                         if(password.value != re_password.value) {
+                              confirm_password.setCustomValidity("Passwords Don't Match");
+                         }
+                         else {
+                           confirm_password.setCustomValidity('');
+                     }
+                 }
+
+                  password.onchange = validatePassword;
+                   confirm_password.onkeyup = validatePassword;
+
+                </script>-->
+
+
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</section>
+<!--login end-->
+
+<style>
+		.hero-section {
+		background-color:#2f3640;
+		}
+
+</style>
+
+{% endblock %}

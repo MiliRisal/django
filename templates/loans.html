@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page top Section end -->
+<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/2.jpg' %}">
+    <div class="container">
+        <h2>Shareholders and Loans</h2>
+        <nav class="site-breadcrumb">
+            <a class="sb-item" href="#">Home</a>
+            <span class="sb-item active">Shareholders and Loans</span>
+        </nav>
+    </div>
+</section>
+<!-- Page top Section end -->
+
+<!-- Loans Section end -->
+<section class="loans-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{% static 'img/loans.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="loans-text">
+                    <h2>We Provide You Shareholders and Loan</h2>
+                    <p>Our company not only provide mentors and expert for you and your business or startup ideas but we
+                        also provide shareholders who can invest in your company. A shareholder, also referred to as a
+                        stockholder, is a person, company, or institution that owns at least one share of a company’s
+                        stock, which is known as equity who can invest for betterment of your startup plan.</p>
+                    <ul>
+                        <li>A Stepping Stone to the Real Markets</li>
+                        <li>Compete, Risk Free with $100,000 in Virtual Cash</li>
+                        <li>Test Your Skills With Trading Challenges</li>
+                    </ul>
+                    <a {% if user.is_authenticated %} href="../loanApply"
+                       {% else %} href="../user/login" onclick="alert('Login First!!')" {% endif%} class="site-btn">Apply
+                        Right Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Loans Section end -->
+
+
+<!-- Services Section -->
+<section class="cta-section set-bg" data-setbg="{% static 'img/cta-bg.jpg'%}">
+
+    <section class="services-section">
+        <div class="container">
+
+            <div id="accordion" class="accordion-area">
+                <div class="text-center mb-5 pb-3">
+                    <h2>What you can learn</h2>
+                </div>
+                <div class="row">
+                    {% for loan in loans %}
+                    <div class="col-md-4">
+
+                        <div class="service-item">
+
+                            <!--<img src="{% static 'img/loans/1.jpg'%}" alt="">-->
+
+							<img src="http://127.0.0.1:8000/media/{{ loan.image }}" alt="">
+                            <h4>{{ loan.title }}</h4>
+                            <p>{{ loan.des }}</p>
+                            <div class="panel">
+                                <div id="collapse1" class="collapse" aria-labelledby="headingOne"
+                                     data-parent="#accordion">
+                                    <div class="panel-body">
+                                        <p> {{ loan.extend }}</p>
+                                    </div>
+                                </div>
+                                <div class="panel-header" id="headingOne">
+                                    <button class="panel-link" data-toggle="collapse" data-target="#collapse1"
+                                            aria-expanded="false" aria-controls="collapse1">Read more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</section>
+<!-- Services Section end -->
+{% endblock %}

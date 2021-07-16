@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<!--signup section-->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2"></div>
+					<div class="col-lg-8">
+				
+					</form>
+						
+						
+						<form class="hero-form" method="post">
+							{% csrf_token %}
+							<labble style="color:white;font-size:30px;padding:50px;">Welcome to Registartion Form</labble>
+							<input type="text" name="fn" placeholder="Please Enter Your First Name" required/>
+							<input type="text" name="ln" placeholder="Please Enter Your Last Name" required/>
+							<input type="text" name="un" placeholder="Please Enter Your User Name" required/>
+							<input type="email" name="em" placeholder="Please Enter Your Email" required/>
+							<input type="password" name="pw" placeholder="Please Enter Your Password" required/>
+							
+							<button class="site-btn">Register</button>
+							<!--<a href="/login" class="active">LogIn</a>-->
+							<a href="../user/login" class="active">Login</a>
+						</form>
+						
+						
+					</div>
+				<div class="col-lg-2"></div>
+				</div>
+			</div>
+	</section>
+	<!--signup end-->
+
+	<style>
+		.hero-section {
+			background-color:#2f3640;
+		}
+	</style>
+	
+{% endblock %}
+
+
